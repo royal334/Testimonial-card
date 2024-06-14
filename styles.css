@@ -1,0 +1,160 @@
+:root{
+     --light-gray:hsl(0, 0%, 81%);
+     --light-grayish-blue: hsl(210, 46%, 95%);
+     --violet: hsl(263, 55%, 52%);
+     --dark-grayish-blue: hsl(217, 19%, 35%);
+     --dark-blackish-blue: hsl(219, 29%, 14%);
+     --white: hsl(0, 0%, 100%);
+     --border:10px;
+     --padding:20px;
+}
+
+body{background-color: var(--light-gray);
+     width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  }
+
+.container{
+     display: grid;
+     grid-template-columns: repeat(4, 1fr); /* To create 4 equal columns */
+     grid-row: 1fr 1fr;
+     gap: 20px;
+     position: absolute;
+     justify-content: center;
+     top:20%;
+     padding: 0px 30px 0px 30px; 
+     font-family: "Barlow Semi Condensed", sans-serif;     
+   
+}
+
+.daniel{grid-column:1 / span 2 ;
+          order:-5;
+          background-color: var(--violet);
+          border-radius: var(--border);
+          padding: var(--padding);
+          position: relative;
+          
+}
+
+.jonathan{order:-4;
+          background-color: var(--dark-grayish-blue);
+          border-radius: var(--border);
+          padding: var(--padding);
+          position: relative;
+          
+}
+
+.jeanette{background-color: var(--white);
+     border-radius: var(--border);
+     padding: var(--padding);
+     position: relative;
+     
+}
+
+.patrick{background-color: var(--dark-blackish-blue);
+          grid-column: 2 / 4;
+          border-radius: var(--border);
+          padding: var(--padding);
+          position: relative;
+        
+     }
+
+
+ 
+.kira{order:-3;
+     grid-column:4 / 5;
+     grid-row:1 /3;
+     background-color: var(--white);
+     border-radius: var(--border);
+     padding: var(--padding);
+     position: relative;
+   
+}
+
+h1, h2, p{color:white;
+          font-size: 13px;
+          
+}
+
+h1{display: inline; 
+     margin: 0px;   
+}
+
+.daniel>h1{position: absolute;
+     top:25px;
+}     
+
+.daniel>h2{position: absolute;
+     top: 45px;}
+
+.jonathan>h1{position: absolute;
+          top:25px;
+     }     
+     
+.jonathan>h2{position: absolute;
+          top: 45px;}
+
+.kira>h1{position: absolute;
+               top:25px;
+          }     
+          
+.kira>h2{position: absolute;
+               top: 45px;}       
+               
+.patrick>h1{position: absolute;
+          top:25px;
+               }     
+               
+.patrick>h2{position: absolute;
+          top: 45px;}  
+
+.jeanette>h1{position: absolute;
+     top:25px;
+}     
+
+.jeanette>h2{position: absolute;
+     top: 45px;}
+
+h2{opacity: 50%;
+     margin-top: 0px;
+     margin-left: 40px;
+}
+p{font-weight: 600;
+     font-size: 23px;
+}
+
+
+img{border-radius: 50%;
+     height: 30px;
+     display:inline-block;
+     padding-right: 10px;     
+}
+
+.span{opacity: 70%;
+     font-size: 13px;
+     margin-top: 50px;
+     
+}
+     
+
+
+@media (min-width:375px) and (max-width:560px) {
+     body{width: 100%;
+          margin: 0px;
+          padding: 0px;
+
+     }
+       
+     .container{grid-template-columns: 1fr;
+          grid-template-rows:1fr 0.5fr 0.5fr 1fr 1.5fr;
+          .daniel{grid-area:1/1/2/2;
+          width: 400px;
+          height:500px;};
+          .jonathan{grid-area: 2/1/3/2;};
+          .jeanette{grid-area: 3/1/4/2;};
+          .patrick{grid-area: 4/1/5/2;};
+          .kira{grid-area: 5/1/6/2;
+          margin-bottom: 50px;};
+}
+}
